@@ -1,0 +1,307 @@
+//Variables
+$primaryColor: #FD7F57;
+$grey: #B9B8B8;
+$black: #000000;
+$montserrat: 'Montserrat', sans-serif;
+
+* { 
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body { 
+  background: whitesmoke url('./assets/circleCi.svg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  main { 
+    height: 100vh;
+      nav { 
+        display: grid;
+        grid-template-columns: 4fr 1fr;
+        margin-bottom: 20vh;
+        padding: 30px;
+        font-family: $montserrat;
+          #date { 
+            h3 { 
+              font-weight: 100;
+              font-size: 0.9em;
+              color: #B9B8B8;
+            }
+            h1 { 
+              font-size: 2.4em;
+              color: #313131;
+            }
+          }
+          .mobileBurger { 
+            width: 70px;
+            height: auto;
+            cursor: pointer;
+            position: relative;
+            display: none;
+              #menuBurger { 
+                width: 100%;
+                height: 100%;
+                padding-top: 30%;
+                transition: all 1s;
+                  div { 
+                    width: 100%;
+                    height: 2px;
+                    background-color: $primaryColor;
+                    margin-bottom: 0.61em;
+                  }
+                  div:nth-child(1) { 
+                    width: 50%;
+                  }
+                  div:nth-child(2) { 
+                    height: 2.5px;
+                  }
+                  div:nth-child(3) { 
+                    width: 30%;
+                  }
+              }
+              .cancel { 
+                width: 60%;
+                height: 60%;
+                background: url('./assets/cancelIcon.svg');
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                margin: 0 auto;
+                position: absolute;
+                top: 24%;
+                left: 20%;
+                display: none;
+              }
+          }
+      }
+
+      #mainContent { 
+        display: grid;
+        grid-template-columns: 1fr 4fr 1fr;
+        font-family: $montserrat;
+        text-align: center;
+        position: relative;
+        padding: 0 4%;
+          .location, .social{ 
+            margin-top: -30%;
+              p:nth-child(1) { 
+                font-size: 1.52em;
+                text-transform: uppercase;
+                color: #313131;
+                letter-spacing: 0.31em;
+                margin-bottom: 60vh;
+                position: relative;
+                  &::before { 
+                    width: 1px;
+                    height: 50vh;
+                    background-color: black;
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    left: 50%;
+                    top: 100%;
+                  }
+              }
+              p:nth-child(2) { 
+                text-transform: uppercase;
+                font-size: 1em;
+                letter-spacing: 0.4em;
+              }
+          }
+          .content { 
+            padding-top: 6%;
+              h1 { 
+                font-size: 4.8em;
+                letter-spacing: 0.03em;
+                text-transform: uppercase;
+              }
+              h1:nth-child(2) { 
+                font-size: 5.1em;
+                letter-spacing: 0.3em;
+                margin-bottom: 20px;
+                text-shadow: 9px 4px rgba(253, 126, 87, 0.555);
+              }
+              p { 
+                text-transform: uppercase;
+                font-weight: 100;
+                margin-bottom: 2em;
+              }
+              a { 
+                background-color: white;
+                display: block;
+                width: 20%;
+                margin: 0 auto;
+                padding: 1em 2em;
+                border-radius: 2000px;
+                position: absolute;
+                bottom: 0;
+                text-transform: uppercase;
+                text-decoration: none;
+                color: black;
+                left: 40%;
+                box-shadow: 0px 10px 20px rgba(239, 187, 144, 0.19);
+                transition: all 0.5s;
+                  &::before { 
+                    transition: all 0.5s;
+                    width: 25px;
+                    height: 25px;
+                    background: url('./assets/send.svg');
+                    background-position: center;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    display: block;
+                    content: '';
+                    top: 24%;
+                    border-radius: 200px;
+                    position: absolute;
+                  }
+                  &:hover { 
+                    background: $primaryColor;
+                    box-shadow: none;
+                    color: white;
+                  }
+                  &:hover::before { 
+                    background: url('./assets/whiteSend.svg');
+                    transform: translateX(14em);
+                    z-index: 0;
+                  }
+              }
+          }
+      }
+      #mobileLayover { 
+        display: none;
+      }
+  }
+}
+
+//Tablet Responsive Code
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) { 
+
+  body { 
+      main { 
+          nav { 
+            margin-bottom: 10vh;
+          }
+          #mainContent { 
+            grid-template-columns: 1fr 3fr 1fr;
+            padding: 0 2%;
+              .location, .social { 
+                  
+                  p:nth-child(1) { 
+                    letter-spacing: 0.3em;
+                    font-size: 1em;
+                    margin-bottom: 50vh;
+                  } 
+                  p:nth-child(2) { 
+                    font-size: 0.8em;
+                  }
+              }
+              .content { 
+                a { 
+                  width: 35%;
+                  left: 33%;
+                }
+              }
+          }
+      }
+  }
+
+}
+
+//Mobile Responsive Code
+@media (min-width: 320px) and (max-width: 480px) { 
+  body { 
+
+      main { 
+          nav { 
+              #date { 
+
+              }
+              .mobileBurger { 
+                display: block;  
+                  #menuBurger { 
+
+                  }
+              }
+          }
+          #mainContent { 
+            display: block;
+            margin-bottom: 50vh;
+              .location, .social { 
+                display: none;
+              }
+              .content { 
+                position: relative;
+                  h1 { 
+                    font-size: 3em;
+                  }
+                  h1:nth-child(2) { 
+                    font-size: 3.5em;
+                  }
+                  p { 
+                    font-size: 0.6em;
+                  }
+                  a { 
+                    bottom: -100%;
+                    width: 70%;
+                    padding-left: 40px;
+                    left: 15%;
+                      &::before { 
+                        left: 5%;
+                      }
+                  }
+                }
+          }
+          #mobileLayover { 
+            display: none;
+            background-color: $primaryColor;
+            height: 100vh;
+            padding-top: 30vh;
+            text-align: center;
+            font-family: $montserrat;
+            position: relative;
+              a { 
+                text-decoration: none;
+                color: white;
+                display: block;
+                font-size: 1.3em;
+                text-transform: uppercase;
+              }
+              a:nth-child(2) { 
+                margin-top: 3em;
+              }
+              .instgram {
+                width: 50px;
+                height: 50px;
+                background: url('./assets/instagram.svg');
+                margin: 0 auto;
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                margin-bottom: 12px;
+                font-family: $montserrat;
+              }
+              p { 
+                position: absolute;
+                bottom: 5%;
+                font-size: 1.3em;
+                text-transform: uppercase;
+                color: white;
+                left: 25%;
+              }
+          }
+      }
+  }
+}
+
+
+
+
+
+::selection { 
+  background: $primaryColor;
+  color: white;
+  padding: 20px;
+}
