@@ -13,6 +13,8 @@ window.onload = () => {
         background: white; 
         border-radius: 200px;
         padding: 4px;
+        width: 50px;
+        height: 50px
 
       `)
       $('.cancel').attr('style', 'display: block; transform: scale(0.6)');

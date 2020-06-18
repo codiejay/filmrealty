@@ -13,7 +13,97 @@ body {
 }
 
 body main {
+  position: relative;
   height: 100vh;
+}
+
+body main .details {
+  font-family: "Montserrat", sans-serif;
+}
+
+body main .details .items {
+  padding: 10px;
+}
+
+body main .details .items p:nth-child(1) {
+  font-size: 1.2em;
+  font-weight: bolder;
+  letter-spacing: 0.03em;
+}
+
+body main .details .items a:nth-child(2) {
+  font-size: 1.2em;
+  font-weight: 300;
+  text-decoration: none;
+  color: black;
+  font-weight: 100;
+  display: block;
+  margin-top: 9px;
+  text-transform: capitalize;
+}
+
+body main .details .items p:nth-child(2) {
+  font-weight: 100;
+  margin-top: 9px;
+  text-transform: capitalize;
+}
+
+body main .details .items #social {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+body main .details .items #social a {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  margin-top: 16px;
+}
+
+body main .details .items #social a:nth-child(1) {
+  background: url("./assets/twt.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+body main .details .items #social a:nth-child(2) {
+  background: url("./assets/ig.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+body main .details .items #social a:nth-child(3) {
+  background: url("./assets/yt.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+body main .details .items:nth-child(1) {
+  position: fixed;
+}
+
+body main .details .items:nth-child(2) {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+body main .details .items:nth-child(3) {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+body main .details .items:nth-child(4) {
+  position: fixed;
+  bottom: 0;
+  right: 0;
 }
 
 body main nav {
@@ -158,7 +248,7 @@ body main #mainContent .content a {
   padding: 1em 2em;
   border-radius: 2000px;
   position: absolute;
-  bottom: 0;
+  bottom: -40%;
   text-transform: uppercase;
   text-decoration: none;
   color: black;
@@ -200,7 +290,7 @@ body main #mainContent .content a:hover::before {
 }
 
 body main #facts {
-  margin-top: 20vh;
+  margin-top: 30vh;
   height: 100vh;
   background: whitesmoke;
 }
@@ -261,6 +351,15 @@ body main #mobileLayover {
   body main nav {
     margin-bottom: 10vh;
   }
+  body main .details .items:nth-child(1),
+  body main .details .items:nth-child(3) {
+    position: absolute;
+  }
+  body main .details .items:nth-child(2),
+  body main .details .items:nth-child(4) {
+    bottom: 45%;
+    position: absolute;
+  }
   body main #mainContent {
     -ms-grid-columns: 1fr 3fr 1fr;
         grid-template-columns: 1fr 3fr 1fr;
@@ -279,7 +378,7 @@ body main #mobileLayover {
     left: 33%;
   }
   body main #facts {
-    margin-top: 10vh;
+    margin-top: 30vh;
     height: 100vh;
     background: whitesmoke;
   }
@@ -321,6 +420,9 @@ body main #mobileLayover {
 @media (min-width: 320px) and (max-width: 480px) {
   body main nav .mobileBurger {
     display: block;
+  }
+  body main .details {
+    display: none;
   }
   body main #mainContent {
     display: block;
@@ -397,26 +499,41 @@ body main #mobileLayover {
     font-family: "Montserrat", sans-serif;
     position: relative;
   }
-  body main #mobileLayover a {
-    text-decoration: none;
+  body main #mobileLayover #social h2 {
     color: white;
-    display: block;
-    font-size: 1.3em;
+    font-size: 1.6em;
     text-transform: uppercase;
   }
-  body main #mobileLayover a:nth-child(2) {
-    margin-top: 3em;
+  body main #mobileLayover #social .iconList {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 2em;
   }
-  body main #mobileLayover .instgram {
-    width: 50px;
-    height: 50px;
-    background: url("./assets/instagram.svg");
+  body main #mobileLayover #social .iconList a {
+    width: 40px;
+    height: 40px;
+    background-color: black;
     margin: 0 auto;
+  }
+  body main #mobileLayover #social .iconList a:nth-child(1) {
+    background: url("./assets/twtwt.svg");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    margin-bottom: 12px;
-    font-family: "Montserrat", sans-serif;
+  }
+  body main #mobileLayover #social .iconList a:nth-child(2) {
+    background: url("./assets/igwt.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  body main #mobileLayover #social .iconList a:nth-child(3) {
+    background: url("./assets/ytwt.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
   body main #mobileLayover p {
     position: absolute;

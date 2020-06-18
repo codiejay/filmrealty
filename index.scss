@@ -16,7 +16,82 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   main { 
+    position: relative;
     height: 100vh;
+      .details { 
+        font-family: $montserrat;
+          .items { 
+            padding: 10px;
+              p:nth-child(1) { 
+                font-size: 1.2em;
+                font-weight: bolder;
+                letter-spacing: 0.03em;
+              }
+              a:nth-child(2) { 
+                font-size: 1.2em;
+                font-weight: 300;
+                text-decoration: none;
+                color: black;
+                font-weight: 100;
+                display: block;
+                margin-top: 9px;
+                text-transform: capitalize;
+
+              }
+              p:nth-child(2){ 
+                font-weight: 100;
+                margin-top: 9px;
+                text-transform: capitalize;
+              }
+              #social {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr; 
+                  a { 
+                    display: block;
+                    width: 30px;
+                    height: 30px;
+                    background-color: black;
+                    margin-top: 16px;
+                  }
+                  a:nth-child(1) { 
+                    background: url('./assets/twt.svg');
+                    background-position: center;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                  }
+                  a:nth-child(2) { 
+                    background: url('./assets/ig.svg');
+                    background-position: center;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                  }
+                  a:nth-child(3) { 
+                    background: url('./assets/yt.svg');
+                    background-position: center;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                  }
+              }
+          }
+          .items:nth-child(1) { 
+            position: fixed;
+          }
+          .items:nth-child(2) { 
+            position: fixed;
+            bottom: 0;
+            left: 0;
+          }
+          .items:nth-child(3) { 
+            position: fixed;
+            top: 0;
+            right: 0;
+          }
+          .items:nth-child(4) { 
+            position: fixed;
+            bottom: 0;
+            right: 0;
+          }
+      }
       nav { 
         display: grid;
         grid-template-columns: 4fr 1fr;
@@ -136,7 +211,7 @@ body {
                 padding: 1em 2em;
                 border-radius: 2000px;
                 position: absolute;
-                bottom: 0;
+                bottom: -40%;
                 text-transform: uppercase;
                 text-decoration: none;
                 color: black;
@@ -171,7 +246,7 @@ body {
           }
       }
       #facts { 
-        margin-top: 20vh;
+        margin-top: 30vh;
         height: 100vh;
         background: whitesmoke;
           .heading { 
@@ -229,6 +304,19 @@ body {
           nav { 
             margin-bottom: 10vh;
           }
+          .details { 
+            
+              .items:nth-child(1),
+              .items:nth-child(3)
+                { 
+                  position: absolute;
+                }
+              .items:nth-child(2),
+              .items:nth-child(4) { 
+                bottom: 45%;
+                position: absolute;
+              }
+          }
           #mainContent { 
             grid-template-columns: 1fr 3fr 1fr;
             padding: 0 2%;
@@ -251,7 +339,7 @@ body {
               }
           }
           #facts { 
-            margin-top: 10vh;
+            margin-top: 30vh;
             height: 100vh;
             background: whitesmoke;
               .heading { 
@@ -296,15 +384,12 @@ body {
 
       main { 
           nav { 
-              #date { 
-
-              }
               .mobileBurger { 
                 display: block;  
-                  #menuBurger { 
-
-                  }
               }
+          }
+          .details { 
+            display: none;
           }
           #mainContent { 
             display: block;
@@ -377,26 +462,41 @@ body {
             text-align: center;
             font-family: $montserrat;
             position: relative;
-              a { 
-                text-decoration: none;
-                color: white;
-                display: block;
-                font-size: 1.3em;
-                text-transform: uppercase;
-              }
-              a:nth-child(2) { 
-                margin-top: 3em;
-              }
-              .instgram {
-                width: 50px;
-                height: 50px;
-                background: url('./assets/instagram.svg');
-                margin: 0 auto;
-                background-position: center;
-                background-size: contain;
-                background-repeat: no-repeat;
-                margin-bottom: 12px;
-                font-family: $montserrat;
+              #social { 
+                  h2 {
+                    color: white;
+                    font-size: 1.6em;
+                    text-transform: uppercase;
+                  }
+                  .iconList { 
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    margin-top: 2em;
+                      a { 
+                        width: 40px;
+                        height: 40px;
+                        background-color: black;
+                        margin: 0 auto;
+                      }
+                      a:nth-child(1) { 
+                        background: url('./assets/twtwt.svg');
+                        background-position: center;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                      }
+                      a:nth-child(2) { 
+                        background: url('./assets/igwt.svg');
+                        background-position: center;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                      }
+                      a:nth-child(3) { 
+                        background: url('./assets/ytwt.svg');
+                        background-position: center;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                      }
+                  }
               }
               p { 
                 position: absolute;
