@@ -20,6 +20,7 @@ window.onload = () => {
       $('.cancel').attr('style', 'display: block; transform: scale(0.6)');
       $('#menuBurger').attr('style', 'display: none');
       $('#mainContent').attr('style', 'display: none');
+      $('#ytvideos').attr('style', 'display: none');
       $('#facts').attr('style', 'display: none');
       $('#mobileLayover').attr('style', 'display: block;');
       $('nav').attr(
@@ -35,6 +36,7 @@ window.onload = () => {
      else { 
       $($('#date').children()[0]).attr('style', 'color: #B9B8B8');
       $($('#date').children()[1]).attr('style', 'color: #313131');
+      $('#ytvideos').attr('style', 'display: block');
       menuIcon.attr('style', 
       `
         background: transparent; 
@@ -67,7 +69,7 @@ window.onload = () => {
       display: block; 
       width: 50px; 
       height: 50px;
-      background: #FD7F57;
+      background: #9d6df77a;
       transition: all 0.1s;
       position: absolute;
       left: ${event.clientX/ screen.width * 100/1 - 1.1}%;

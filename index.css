@@ -5,7 +5,13 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
 body {
+  scroll-behavior: smooth;
   background: whitesmoke url("./assets/circleCi.svg");
   background-position: center;
   background-size: cover;
@@ -85,23 +91,23 @@ body main .details .items #social a:nth-child(3) {
 }
 
 body main .details .items:nth-child(1) {
-  position: fixed;
+  position: absolute;
 }
 
 body main .details .items:nth-child(2) {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
 }
 
 body main .details .items:nth-child(3) {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
 }
 
 body main .details .items:nth-child(4) {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   right: 0;
 }
@@ -146,7 +152,7 @@ body main nav .mobileBurger #menuBurger {
 body main nav .mobileBurger #menuBurger div {
   width: 100%;
   height: 2px;
-  background-color: #FD7F57;
+  background-color: #9e6df7;
   margin-bottom: 0.61em;
 }
 
@@ -221,6 +227,22 @@ body main #mainContent .content {
   padding-top: 6%;
 }
 
+body main #mainContent .content #playBttn {
+  width: 130px;
+  height: 130px;
+  background: url("./assets/play-button.svg");
+  background-position: top;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  display: block;
+  margin: 5em auto 0 auto;
+  cursor: pointer;
+}
+
+body main #mainContent .content #playBttn:focus {
+  border: none;
+}
+
 body main #mainContent .content h1 {
   font-size: 4.8em;
   letter-spacing: 0.03em;
@@ -231,7 +253,7 @@ body main #mainContent .content h1:nth-child(2) {
   font-size: 5.1em;
   letter-spacing: 0.3em;
   margin-bottom: 20px;
-  text-shadow: 9px 4px rgba(253, 126, 87, 0.555);
+  text-shadow: 9px 4px #9d6df77a;
 }
 
 body main #mainContent .content p {
@@ -240,7 +262,7 @@ body main #mainContent .content p {
   margin-bottom: 2em;
 }
 
-body main #mainContent .content a {
+body main #mainContent .content #sendMail {
   background-color: white;
   display: block;
   width: 20%;
@@ -253,18 +275,19 @@ body main #mainContent .content a {
   text-decoration: none;
   color: black;
   left: 40%;
-  -webkit-box-shadow: 0px 10px 20px rgba(239, 187, 144, 0.19);
-          box-shadow: 0px 10px 20px rgba(239, 187, 144, 0.19);
+  -webkit-box-shadow: 0px 10px 20px #9d6df773;
+          box-shadow: 0px 10px 20px #9d6df773;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  display: none;
 }
 
-body main #mainContent .content a::before {
+body main #mainContent .content #sendMail::before {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   width: 25px;
   height: 25px;
-  background: url("./assets/send.svg");
+  background: url("./assets/purpleSend.svg");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -275,14 +298,14 @@ body main #mainContent .content a::before {
   position: absolute;
 }
 
-body main #mainContent .content a:hover {
-  background: #FD7F57;
+body main #mainContent .content #sendMail:hover {
+  background: #9e6df7;
   -webkit-box-shadow: none;
           box-shadow: none;
   color: white;
 }
 
-body main #mainContent .content a:hover::before {
+body main #mainContent .content #sendMail:hover::before {
   background: url("./assets/whiteSend.svg");
   -webkit-transform: translateX(14em);
           transform: translateX(14em);
@@ -320,7 +343,7 @@ body main #facts .factsLists .factBox {
 body main #facts .factsLists .factBox .boxOne {
   font-size: 1.5em;
   height: 15vh;
-  background-color: #FD7F57;
+  background-color: #9e6df7;
   padding: 1em 0.4em;
   border-radius: 10px;
   color: white;
@@ -341,6 +364,15 @@ body main #facts .factsLists .factBox .boxTwo {
   top: 50%;
   -webkit-box-shadow: 1px 1px 20px 12px rgba(253, 126, 87, 0.123);
           box-shadow: 1px 1px 20px 12px rgba(253, 126, 87, 0.123);
+}
+
+body main #ytvideos {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  width: 85%;
+  margin: 4em auto 4em auto;
 }
 
 body main #mobileLayover {
@@ -415,6 +447,17 @@ body main #mobileLayover {
     -webkit-box-shadow: 1px 1px 20px 12px rgba(253, 126, 87, 0.123);
             box-shadow: 1px 1px 20px 12px rgba(253, 126, 87, 0.123);
   }
+  body main #ytvideos {
+    display: block;
+    width: 90%;
+    margin: 2em auto 4em auto;
+    margin: 0 auto;
+  }
+  body main #ytvideos iframe {
+    width: 80%;
+    margin: 1em auto;
+    display: block;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -442,15 +485,26 @@ body main #mobileLayover {
   }
   body main #mainContent .content p {
     font-size: 0.8em;
+    line-height: 1.8em;
+    display: none;
   }
-  body main #mainContent .content a {
+  body main #mainContent .content #sendMail {
+    display: block;
     bottom: -100%;
     width: 70%;
     padding-left: 40px;
     left: 15%;
+    width: 70%;
   }
-  body main #mainContent .content a::before {
+  body main #mainContent .content #sendMail::before {
     left: 5%;
+  }
+  body main #mainContent .content #sendMail:hover::before {
+    -webkit-transform: translateX(12em);
+            transform: translateX(12em);
+  }
+  body main #mainContent .content #playBttn {
+    display: none;
   }
   body main #facts {
     margin-top: 5vh;
@@ -490,9 +544,19 @@ body main #mobileLayover {
     -webkit-box-shadow: 1px 1px 20px 12px rgba(253, 126, 87, 0.123);
             box-shadow: 1px 1px 20px 12px rgba(253, 126, 87, 0.123);
   }
+  body main #ytvideos {
+    display: block;
+    width: 90%;
+    margin: 100vh auto 4em auto;
+  }
+  body main #ytvideos iframe {
+    width: 100%;
+    margin: 1em auto;
+    display: block;
+  }
   body main #mobileLayover {
     display: none;
-    background-color: #FD7F57;
+    background-color: #9e6df7;
     height: 100vh;
     padding-top: 30vh;
     text-align: center;
@@ -546,13 +610,13 @@ body main #mobileLayover {
 }
 
 ::-moz-selection {
-  background: #FD7F57;
+  background: #9e6df7;
   color: white;
   padding: 20px;
 }
 
 ::selection {
-  background: #FD7F57;
+  background: #9e6df7;
   color: white;
   padding: 20px;
 }
