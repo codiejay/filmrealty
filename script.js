@@ -18,6 +18,7 @@ window.onload = () => {
       $('.cancel').attr('style', 'display: block; transform: scale(0.6)');
       $('#menuBurger').attr('style', 'display: none');
       $('#mainContent').attr('style', 'display: none');
+      $('#facts').attr('style', 'display: none');
       $('#mobileLayover').attr('style', 'display: block;');
       $('nav').attr(
         `style`, 
@@ -43,6 +44,7 @@ window.onload = () => {
       $('#menuBurger').attr('style', 'display: block');
        $('#mainContent').attr('style', 'display: none');
       $('#mainContent').attr('style', 'display: block');
+      $('#facts').attr('style', 'display: block');
        $('nav').attr(
          `style`, 
            `display: grid; 

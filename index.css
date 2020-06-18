@@ -199,6 +199,60 @@ body main #mainContent .content a:hover::before {
   z-index: 0;
 }
 
+body main #facts {
+  margin-top: 20vh;
+  height: 100vh;
+  background: whitesmoke;
+}
+
+body main #facts .heading {
+  padding: 1.2em 2em;
+  font-size: 3em;
+  font-family: "Montserrat", sans-serif;
+  text-transform: capitalize;
+}
+
+body main #facts .factsLists {
+  padding: 3em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  gap: 3em;
+}
+
+body main #facts .factsLists .factBox {
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 3em;
+}
+
+body main #facts .factsLists .factBox .boxOne {
+  font-size: 1.5em;
+  height: 15vh;
+  background-color: #FD7F57;
+  padding: 1em 0.4em;
+  border-radius: 10px;
+  color: white;
+  -webkit-box-shadow: 0px 5px 20px 12px rgba(58, 58, 58, 0.151);
+          box-shadow: 0px 5px 20px 12px rgba(58, 58, 58, 0.151);
+}
+
+body main #facts .factsLists .factBox .boxTwo {
+  font-size: 1.1em;
+  height: auto;
+  background-color: white;
+  padding: 1em 0.4em;
+  font-weight: 100;
+  color: black;
+  position: absolute;
+  line-height: 1.6em;
+  left: 10%;
+  top: 50%;
+  -webkit-box-shadow: 1px 1px 20px 12px rgba(253, 126, 87, 0.123);
+          box-shadow: 1px 1px 20px 12px rgba(253, 126, 87, 0.123);
+}
+
 body main #mobileLayover {
   display: none;
 }
@@ -224,6 +278,44 @@ body main #mobileLayover {
     width: 35%;
     left: 33%;
   }
+  body main #facts {
+    margin-top: 10vh;
+    height: 100vh;
+    background: whitesmoke;
+  }
+  body main #facts .heading {
+    padding: 0.5em 1em;
+    font-size: 2.5em;
+    font-family: "Montserrat", sans-serif;
+    text-transform: capitalize;
+  }
+  body main #facts .factsLists {
+    padding: 2em;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 3em;
+  }
+  body main #facts .factsLists .factBox {
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 3em;
+  }
+  body main #facts .factsLists .factBox .boxTwo {
+    font-size: 1em;
+    height: auto;
+    background-color: white;
+    padding: 1em 0.4em;
+    font-weight: 100;
+    color: black;
+    position: absolute;
+    line-height: 1.6em;
+    left: 10%;
+    top: 50%;
+    -webkit-box-shadow: 1px 1px 20px 12px rgba(253, 126, 87, 0.123);
+            box-shadow: 1px 1px 20px 12px rgba(253, 126, 87, 0.123);
+  }
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -247,7 +339,7 @@ body main #mobileLayover {
     font-size: 3.5em;
   }
   body main #mainContent .content p {
-    font-size: 0.6em;
+    font-size: 0.8em;
   }
   body main #mainContent .content a {
     bottom: -100%;
@@ -257,6 +349,44 @@ body main #mobileLayover {
   }
   body main #mainContent .content a::before {
     left: 5%;
+  }
+  body main #facts {
+    margin-top: 5vh;
+    height: 100vh;
+    background: whitesmoke;
+  }
+  body main #facts .heading {
+    padding: 0.5em 0.3em;
+    font-size: 1.4em;
+    font-family: "Montserrat", sans-serif;
+    text-transform: capitalize;
+  }
+  body main #facts .factsLists {
+    padding: 2em;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 3em;
+  }
+  body main #facts .factsLists .factBox {
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 5em;
+  }
+  body main #facts .factsLists .factBox .boxTwo {
+    font-size: 1em;
+    height: auto;
+    background-color: white;
+    padding: 1em 0.4em;
+    font-weight: 100;
+    color: black;
+    position: absolute;
+    line-height: 1.6em;
+    left: 10%;
+    top: 70%;
+    -webkit-box-shadow: 1px 1px 20px 12px rgba(253, 126, 87, 0.123);
+            box-shadow: 1px 1px 20px 12px rgba(253, 126, 87, 0.123);
   }
   body main #mobileLayover {
     display: none;
