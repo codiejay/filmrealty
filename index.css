@@ -5,6 +5,16 @@
   margin: 0;
 }
 
+*:active {
+  background: none;
+  border: none;
+}
+
+*:focus {
+  background: none;
+  border: none;
+}
+
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
