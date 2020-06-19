@@ -380,8 +380,8 @@ body main #ytvideos {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  width: 85%;
-  margin: 4em auto 4em auto;
+  width: 95%;
+  margin: 4em auto 2em auto;
 }
 
 body main footer {
@@ -456,7 +456,7 @@ body main #mobileLayover {
   display: none;
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1334px) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   body main nav {
     margin-bottom: 10vh;
   }
@@ -529,8 +529,9 @@ body main #mobileLayover {
   }
   body main #ytvideos {
     display: block;
-    width: 90%;
-    margin: 2em auto 4em auto;
+    width: 100%;
+    margin: 2em auto 0em auto;
+    gap: 4em;
     margin: 0 auto;
   }
   body main #ytvideos iframe {
