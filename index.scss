@@ -315,6 +315,63 @@ body {
         width: 85%;
         margin: 4em auto 4em auto;
       }
+      footer { 
+        position: absolute;
+        width: 100%;
+        background-color: $primaryColor;
+        text-align: center;
+        font-family: $montserrat;
+        padding: 0.6em 0;
+          .copyRight { 
+            padding: 0.4em 0;
+            font-size: 1.3em;
+            color: white;
+            text-transform: uppercase;
+          }
+          #footerDetails { 
+            font-size: 1.2em;
+            color: white;
+              a { 
+                color: white;
+                font-family: $montserrat;
+                text-decoration: none;
+                text-transform: uppercase;
+                margin: 1em 0;
+                display: block;
+              }
+          }
+          .fotterFollow { 
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            width: 30%;
+            margin: 0 auto;
+              a { 
+                background-color: black;
+                width: 30px;
+                height: 30px;
+                display: block;
+                margin: 0 auto;
+              }
+              a:nth-child(1) { 
+                background: url('./assets/twtwt.svg');
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+              }
+              a:nth-child(2) { 
+                background: url('./assets/igwt.svg');
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+              }
+              a:nth-child(3) { 
+                background: url('./assets/ytwt.svg');
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+              }
+          }
+      }
       #mobileLayover { 
         display: none;
       }
@@ -330,7 +387,6 @@ body {
             margin-bottom: 10vh;
           }
           .details { 
-            
               .items:nth-child(1),
               .items:nth-child(3)
                 { 
@@ -357,7 +413,10 @@ body {
                   }
               }
               .content { 
-                a { 
+                p { 
+                  line-height: 1.8em;
+                }
+                #sendMail { 
                   width: 35%;
                   left: 33%;
                 }
@@ -410,6 +469,7 @@ body {
               }
           }
       }
+      
   }
 
 }
@@ -563,6 +623,15 @@ body {
                 left: 25%;
               }
           }
+
+        footer { 
+          .fotterFollow { 
+            width: 90%;
+              a { 
+                width: 70%;
+              }
+          }
+        }
       }
   }
 }
